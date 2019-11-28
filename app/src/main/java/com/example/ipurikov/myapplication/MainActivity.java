@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,9 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // Начальная инициализация настройками (тут они могут вычитываться из хранилища приложения, например)
             fptr.setSingleSetting(IFptr.LIBFPTR_SETTING_PORT, String.valueOf(IFptr.LIBFPTR_PORT_BLUETOOTH));
             fptr.setSingleSetting(IFptr.LIBFPTR_SETTING_MACADDRESS, "34:87:3D:5C:BC:12");
-            //fptr.setSingleSetting(IFptr.LIBFPTR_SETTING_PORT, String.valueOf(IFptr.LIBFPTR_PORT_TCPIP));
-            //fptr.setSingleSetting(IFptr.LIBFPTR_SETTING_IPPORT, "5555");
-            //fptr.setSingleSetting(IFptr.LIBFPTR_SETTING_IPADDRESS, "192.168.43.133");
+
+            fptr.setSingleSetting(IFptr.LIBFPTR_SETTING_PORT, String.valueOf(IFptr.LIBFPTR_PORT_TCPIP));
+            fptr.setSingleSetting(IFptr.LIBFPTR_SETTING_IPPORT, "5555");
+            fptr.setSingleSetting(IFptr.LIBFPTR_SETTING_IPADDRESS, "192.168.43.133");
             fptr.setSingleSetting(IFptr.LIBFPTR_SETTING_OFD_CHANNEL, String.valueOf(IFptr.LIBFPTR_OFD_CHANNEL_NONE));
 
             fptr.applySingleSettings();
